@@ -13,6 +13,7 @@ export interface KeyProps {
   justify?: "end" | "center" | "start";
   className?: string;
   btnLast?: boolean;
+  bright?: boolean;
 }
 
 const widthStyle = {
@@ -45,13 +46,30 @@ const SingleKey = ({
   justify = "center",
   className = "",
   btnLast = false,
+  bright = false,
 }: KeyProps) => {
   return (
     <div>
       <motion.div
+        animate={
+          bright
+            ? {
+                scale: [1, 1.03, 1],
+              }
+            : {}
+        }
+        transition={
+          bright
+            ? {
+                delay: 1,
+                duration: 2,
+                repeat: Infinity,
+              }
+            : {}
+        }
         whileHover={{ scale: 0.98 }}
         whileTap={{ scale: 1 }}
-        className={`${className} ${btnLast ? "h-[25px] lg:h-[28px]" : "h-[50px] lg:h-[60px]"} flex cursor-pointer space-y-0.5 md:space-y-1 ${widthStyle[width]} ${justifyStyle[justify]} flex-col items-center rounded-md border-t-2 border-l-2 border-gray-600 bg-black p-2 text-xs font-semibold text-neutral-200 shadow-md shadow-neutral-300 hover:shadow-lg hover:shadow-neutral-600 sm:text-sm`}
+        className={`${className} ${btnLast ? "h-[25px] lg:h-[28px]" : "h-[50px] lg:h-[60px]"} flex cursor-pointer space-y-0.5 md:space-y-1 ${widthStyle[width]} ${justifyStyle[justify]} flex-col items-center rounded-md border-t-2 border-l-2 border-gray-600 bg-black p-2 text-xs font-semibold text-neutral-200 shadow-md ${bright ? "shadow-blue-500" : "shadow-neutral-300"} hover:shadow-lg hover:shadow-neutral-600 sm:text-sm`}
       >
         {/* Top text/Icon */}
         {keytop && (

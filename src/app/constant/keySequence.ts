@@ -15,7 +15,6 @@ import { CiGrid32 } from "react-icons/ci";
 import { CiMicrophoneOn } from "react-icons/ci";
 import { FaWindows } from "react-icons/fa6";
 import { FaRegMoon } from "react-icons/fa";
-
 import { KeyProps } from "../component/SingleKey";
 
 export const topRowKeys: KeyProps[] = [
@@ -570,6 +569,7 @@ export const SixthRowKeys: KeyProps[] = [
     topAlign: "center",
     bottomAlign: "center",
     justify: "center",
+    bright: true,
   }, // spacebar
   {
     width: "normal",

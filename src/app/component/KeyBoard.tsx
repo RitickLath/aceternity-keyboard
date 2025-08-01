@@ -1,5 +1,5 @@
 import React from "react";
-import SingleKey from "../component/SingleKey";
+import SingleKey from "./SingleKey";
 import {
   topRowKeys,
   SecondRowKeys,
@@ -7,7 +7,7 @@ import {
   FourthRowKeys,
   FifthRowKeys,
   SixthRowKeys,
-} from "./keySequence";
+} from "../constant/keySequence";
 import { FaChevronUp, FaChevronDown, FaChevronRight } from "react-icons/fa";
 
 const KeyBoard = () => {
