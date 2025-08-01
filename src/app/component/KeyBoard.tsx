@@ -12,7 +12,7 @@ import { FaChevronUp, FaChevronDown, FaChevronRight } from "react-icons/fa";
 
 const KeyBoard = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-2 rounded-lg bg-[#29292C]/40 p-4 text-white backdrop-blur-md">
+    <div className="flex flex-col justify-start gap-2 overflow-x-hidden rounded-lg bg-[#29292C]/40 p-4 text-white backdrop-blur-md">
       <div className="flex gap-2">
         {topRowKeys.map((keyProps, idx) => (
           <SingleKey key={idx} {...keyProps} />

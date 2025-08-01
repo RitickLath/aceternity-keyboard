@@ -5,7 +5,7 @@ import KeyBoard from "./component/KeyBoard";
 
 const Home = () => {
   return (
-    <main className="min-h-screen w-full bg-gradient-to-br from-black via-gray-900 to-gray-950 text-white">
+    <main className="min-h-screen w-full overflow-x-auto bg-gradient-to-br from-black via-gray-900 to-gray-950 text-white">
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center px-4 py-20 text-center">
         <h1 className="bg-gradient-to-r from-cyan-400 to-sky-600 bg-clip-text text-4xl font-extrabold tracking-tight text-transparent sm:text-5xl md:text-6xl">
@@ -26,9 +26,9 @@ const Home = () => {
       {/* Keyboard Showcase Section */}
       <section
         id="keyboard"
-        className="flex flex-col items-center justify-center pb-24"
+        className=" px-4 lg:flex lg:flex-col lg:items-center justify-center pb-24"
       >
-        <div className="rounded-xl border border-gray-700 bg-[#1a1b1e]/40 p-6 shadow-lg backdrop-blur-md">
+        <div className="overflow-hidden rounded-xl border border-gray-700 bg-[#1a1b1e]/40 p-6 shadow-lg backdrop-blur-md">
           <KeyBoard />
         </div>
       </section>
